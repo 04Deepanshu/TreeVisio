@@ -164,11 +164,11 @@ function Tree() {
     this.nodes = treeContainer
     .selectAll("circle")
     .raise()
-
+    .on("click", addHighlight)
     this.text = treeContainer
     .selectAll("text.circle")
     .raise()
-
+    .on("click", addHighlight)
     this.nodes.call(circleAttr);
   }
 
@@ -296,3 +296,4 @@ function createContainer(id, arr, width, height) {
 
   return container;
 }
+
