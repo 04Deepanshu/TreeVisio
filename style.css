@@ -20,8 +20,7 @@ html {
     margin-right: 10px; 
   }
   
-  #title {
-    
+  #title { 
     background-color: rgb(61, 61, 61);
     font-size: 1.1em;
     color: white;
@@ -30,8 +29,12 @@ html {
     border: none;
     border-radius: 3px;
     font-weight: normal;
-    font-size: 1.75em;
-  
+    font-size: 1.7em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    width: 1230px; /* Adjust the width value as needed */
+    height: 40px;
+  margin-left: 20px; /* Adjust the left margin value as needed */
+  line-height: 40px; /* Adjust the line-height value to center the text vertically */
   }
   
   #blurb {
@@ -58,7 +61,7 @@ html {
     
     background-size: cover;
     width: 100%;
-    padding: 1em;
+    margin-top: 10px;
     color:black;
   }
   button {
