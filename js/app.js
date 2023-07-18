@@ -27,6 +27,18 @@ function heapify() {
   }
 }
 
+function minHeapify() {
+  reset();
+  let inputText = document.getElementById("array-input")
+  if (inputText.value !== '') {
+    input = inputText.value.trim().split(/\s+|\,+/g).map((num) => parseInt(num));
+    makeMinHeap(input, input.length);
+    createBinaryTreeAndArr(input);
+    document.getElementById('instructions').innerHTML = "<p> A max heap tree is a specialized binary tree where the parent node's value is always lesser than or equal to its child nodes, facilitating efficient retrieval of the minimum element.</p>";
+    document.getElementById('visual-title').innerHTML = "Min-Heap Binary Tree";
+  }
+}
+
 function createBinaryTreeAndArr(arr) {
   arrayContainer = createContainer("array-visual", arr, arr.length * 60, 100);
   let tree = new Tree()
