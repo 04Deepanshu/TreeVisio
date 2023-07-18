@@ -35,6 +35,22 @@ function makeHeap(arr) {
   return arr;
 }
 
+function makeMinHeap(arr) {
+  let i;  
+  let k;  
+
+  for (i = 1; i < arr.length; ++i)
+  {
+      k = i;
+while (k > 0 && arr[k] < arr[parent(k)]) {
+  swap(arr, parent(k), k);
+  k = parent(k);
+}
+}
+return arr;
+}
+
+
 function reheapifyDown(arr, length) {
   let index = 0;
   let bigChildIndex;
